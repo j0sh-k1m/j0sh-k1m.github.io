@@ -109,3 +109,8 @@
   *::-webkit-scrollbar-thumb:hover {
     background-color: var(--amplitude-dark-blue) !important;
   }
+
+  [class*="Header_logo"],                                                                                                                                                                                                                                                                   
+  .Header_logo__logo {                                                                                                                                                                                                                                                                      
+    display: none !important;                                                                                                                                                                                                                                                               
+  }    
