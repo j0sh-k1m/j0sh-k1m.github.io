@@ -114,3 +114,9 @@
   .Header_logo__logo {                                                                                                                                                                                                                                                                      
     display: none !important;                                                                                                                                                                                                                                                               
   }    
+
+  .header--cs,
+  .top-bar,
+  [class*="Header_header"] {
+    display: none !important;
+  }
