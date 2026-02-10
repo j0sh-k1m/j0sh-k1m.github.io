@@ -1,8 +1,5 @@
-/* Amplitude-Branded BeeFree Editor Styles */
-  /* Host this file on HTTPS and reference it with config.customCss */                                                                                                                                                                                                                      
-                  
-  /* Main Variables */                                                                                                                                                                                                                                                                      
-  :root {         
+ /* Main Variables */
+  :root {
     --amplitude-blue: #047CC0;
     --amplitude-dark-blue: #0366A6;
     --amplitude-light-blue: #E8F4F8;
@@ -13,188 +10,183 @@
     --amplitude-border: #E2E8F0;
   }
 
-  /* Top Toolbar - Main application bar */
-  .bee-toolbar--cs {
+  /* Main BeeFree body */
+  .bee--cs {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif !important;
+  }
+
+  /* Top Header/Toolbar */
+  .header--cs,
+  .top-bar {
     background-color: var(--amplitude-blue) !important;
     border-bottom: 2px solid var(--amplitude-dark-blue) !important;
     box-shadow: 0 2px 8px rgba(4, 124, 192, 0.15) !important;
   }
 
-  /* Toolbar buttons */
-  .bee-toolbar--cs .bee-btn--cs,
-  .bee-toolbar--cs button--cs {
-    background-color: transparent !important;
+  /* Header buttons and elements */
+  .header--cs button,
+  .header--cs a,
+  .top-bar button,
+  .top-bar a {
     color: white !important;
     border-radius: 6px !important;
-    font-weight: 500 !important;
     transition: all 0.2s ease !important;
   }
 
-  .bee-toolbar--cs .bee-btn--cs:hover,
-  .bee-toolbar--cs button--cs:hover {
+  .header--cs button:hover,
+  .header--cs a:hover,
+  .top-bar button:hover,
+  .top-bar a:hover {
     background-color: var(--amplitude-dark-blue) !important;
   }
 
-  /* Primary action buttons (Save, etc.) */
-  .bee-btn-primary--cs {
+  /* Floating toolbar */
+  .floating-toolbar--cs {
+    background-color: var(--amplitude-light-gray) !important;
+    border: 1px solid var(--amplitude-border) !important;
+    border-radius: 8px !important;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1) !important;
+  }
+
+  .floating-toolbar--cs button {
+    color: var(--amplitude-blue) !important;
+    border-radius: 6px !important;
+    transition: all 0.2s ease !important;
+  }
+
+  .floating-toolbar--cs button:hover {
+    background-color: var(--amplitude-light-blue) !important;
+  }
+
+  /* Primary buttons */
+  button[class*="primary"],
+  .button--cs[class*="primary"] {
     background-color: var(--amplitude-purple) !important;
     color: white !important;
     border-radius: 8px !important;
     font-weight: 600 !important;
-    padding: 8px 20px !important;
     box-shadow: 0 2px 4px rgba(108, 92, 231, 0.2) !important;
   }
 
-  .bee-btn-primary--cs:hover {
+  button[class*="primary"]:hover,
+  .button--cs[class*="primary"]:hover {
     background-color: #5B4BC4 !important;
     box-shadow: 0 4px 8px rgba(108, 92, 231, 0.3) !important;
   }
 
   /* Sidebar */
-  .bee-sidebar--cs {
+  .sidebar--cs {
     background-color: var(--amplitude-light-gray) !important;
     border-right: 1px solid var(--amplitude-border) !important;
   }
 
   /* Sidebar tabs */
-  .bee-sidebar-tab--cs {
+  .sidebar-tab--cs {
     color: var(--amplitude-gray) !important;
     border-radius: 8px !important;
     margin: 4px !important;
     transition: all 0.2s ease !important;
   }
 
-  .bee-sidebar-tab--cs:hover {
+  .sidebar-tab--cs:hover {
     background-color: var(--amplitude-light-blue) !important;
     color: var(--amplitude-blue) !important;
   }
 
-  .bee-sidebar-tab--cs.active--cs,
-  .bee-sidebar-tab-active--cs {
+  .sidebar-tab--cs.active,
+  .sidebar-tab-active--cs {
     background-color: var(--amplitude-blue) !important;
     color: white !important;
     font-weight: 600 !important;
   }
 
-  /* Content panels */
-  .bee-panel--cs,
-  .bee-content-panel--cs {
+  /* Panels */
+  .panel--cs {
     background-color: white !important;
     border: 1px solid var(--amplitude-border) !important;
     border-radius: 8px !important;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1) !important;
   }
 
-  .bee-panel-header--cs {
+  .panel-header--cs {
     background-color: var(--amplitude-light-gray) !important;
     border-bottom: 1px solid var(--amplitude-border) !important;
     color: var(--amplitude-dark-gray) !important;
     font-weight: 600 !important;
   }
 
-  /* Form elements */
-  .bee-input--cs,
-  .bee-select--cs,
-  .bee-textarea--cs {
+  /* Form inputs */
+  .input--cs,
+  .select--cs,
+  .textarea--cs,
+  input[class*="--cs"],
+  select[class*="--cs"],
+  textarea[class*="--cs"] {
     border: 1px solid var(--amplitude-border) !important;
     border-radius: 6px !important;
-    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif !important;
     transition: all 0.2s ease !important;
   }
 
-  .bee-input--cs:focus,
-  .bee-select--cs:focus,
-  .bee-textarea--cs:focus {
+  .input--cs:focus,
+  .select--cs:focus,
+  .textarea--cs:focus,
+  input[class*="--cs"]:focus,
+  select[class*="--cs"]:focus,
+  textarea[class*="--cs"]:focus {
     border-color: var(--amplitude-blue) !important;
     box-shadow: 0 0 0 3px rgba(4, 124, 192, 0.1) !important;
     outline: none !important;
   }
 
   /* Tooltips */
-  .bee-tooltip--cs {
+  .tooltip--cs {
     background-color: var(--amplitude-dark-gray) !important;
     border-radius: 6px !important;
-    font-size: 13px !important;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15) !important;
   }
 
-  /* Modal/Dialog */
-  .bee-modal--cs,
-  .bee-dialog--cs {
+  /* Modals */
+  .modal--cs,
+  .dialog--cs {
     border-radius: 12px !important;
-    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04) !important;
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1) !important;
   }
 
-  .bee-modal-header--cs {
+  .modal-header--cs {
     background-color: var(--amplitude-light-blue) !important;
     border-bottom: 1px solid var(--amplitude-border) !important;
     color: var(--amplitude-dark-gray) !important;
   }
 
-  /* Loading spinner */
-  .bee-spinner--cs {
-    border-color: var(--amplitude-light-blue) !important;
-    border-top-color: var(--amplitude-blue) !important;
-  }
-
-  /* Content blocks in the editor */
-  .bee-content-block--cs:hover {
-    outline: 2px solid var(--amplitude-blue) !important;
-    outline-offset: 2px !important;
-  }
-
   /* Context menu */
-  .bee-context-menu--cs {
+  .context-menu--cs {
     background-color: white !important;
     border: 1px solid var(--amplitude-border) !important;
     border-radius: 8px !important;
     box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1) !important;
   }
 
-  .bee-context-menu-item--cs:hover {
+  .context-menu-item--cs:hover {
     background-color: var(--amplitude-light-blue) !important;
     color: var(--amplitude-blue) !important;
   }
 
-  /* Color picker */
-  .bee-color-picker--cs {
-    border-radius: 8px !important;
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1) !important;
-  }
-
   /* Scrollbars */
-  .bee-scrollbar--cs::-webkit-scrollbar {
+  *[class*="--cs"]::-webkit-scrollbar {
     width: 8px !important;
     height: 8px !important;
   }
 
-  .bee-scrollbar--cs::-webkit-scrollbar-track {
+  *[class*="--cs"]::-webkit-scrollbar-track {
     background: var(--amplitude-light-gray) !important;
     border-radius: 4px !important;
   }
 
-  .bee-scrollbar--cs::-webkit-scrollbar-thumb {
+  *[class*="--cs"]::-webkit-scrollbar-thumb {
     background: var(--amplitude-blue) !important;
     border-radius: 4px !important;
   }
 
-  .bee-scrollbar--cs::-webkit-scrollbar-thumb:hover {
+  *[class*="--cs"]::-webkit-scrollbar-thumb:hover {
     background: var(--amplitude-dark-blue) !important;
-  }
-
-  /* Typography */
-  .bee-editor--cs {
-    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif !important;
-  }
-
-  /* Stage (canvas area) */
-  .bee-stage--cs {
-    background-color: var(--amplitude-light-gray) !important;
-  }
-
-  /* Remove BeeFree branding (if visible) */
-  .bee-branding--cs,
-  .bee-logo--cs,
-  .bee-powered-by--cs {
-    display: none !important;
   }
